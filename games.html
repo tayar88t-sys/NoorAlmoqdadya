@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ألعاب مدينة العاب نور المقدادية - اكتشف أفضل الألعاب الترفيهية في Diyala">
+    <meta name="keywords" content="ألعاب, مدينة ألعاب, نور المقدادية, العاب ترفيهية, العاب أطفال, Diyala">
+    
+    <title>ألعابنا | مدينة العاب نور المقدادية</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%236F4E37'>NO</text></svg>">
+    
+    
+    <style>
+        :root {
+            --primary: #6F4E37;
+            --accent: #F59E0B;
+            --dark: #1F2937;
+            --bg: #fbf2d5;
+        }
+        
+        body {
+            background-color: var(--bg) !important;
+        }
+    </style>
+</head>
+<body class="font-cairo">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 shadow-md" style="background-color: var(--bg); border-bottom: 2px solid var(--primary);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="images/logo.jpg" alt="مدينة العاب نور المقدادية" class="w-12 h-12 rounded-full object-cover shadow-md">
+                    <div>
+                        <h1 class="text-xl font-bold" style="color: var(--dark);">مدينة العاب</h1>
+                        <p class="text-sm font-semibold" style="color: var(--primary);">نور المقدادية</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-1 rtl:space-x-reverse">
+                    <a href="index.html" class="px-4 py-2 rounded-lg transition-all font-semibold hover:text-white" style="color: var(--dark);">الرئيسية</a>
+                    <a href="about.html" class="px-4 py-2 rounded-lg transition-all font-semibold hover:text-white" style="color: var(--dark);">من نحن</a>
+                    <a href="games.html" class="px-4 py-2 rounded-lg transition-all font-semibold text-white" style="background-color: var(--primary);">ألعابنا</a>
+                    <a href="pricing.html" class="px-4 py-2 rounded-lg transition-all font-semibold hover:text-white" style="color: var(--dark);">الأسعار</a>
+                    <a href="jobs.html" class="px-4 py-2 rounded-lg transition-all font-semibold hover:text-white" style="color: var(--dark);">الوظائف</a>
+                    <a href="gallery.html" class="px-4 py-2 rounded-lg transition-all font-semibold hover:text-white" style="color: var(--dark);">معرض الصور</a>
+                    <a href="testimonials.html" class="px-4 py-2 rounded-lg transition-all font-semibold hover:text-white" style="color: var(--dark);">آراء العملاء</a>
+                    <a href="contact.html" class="px-4 py-2 rounded-lg transition-all font-semibold hover:text-white" style="color: var(--dark);">اتصل بنا</a>
+                </div>
+                
+                <!-- Language Selector removed -->
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="tel:07716163020" class="text-white px-6 py-3 rounded-full font-bold hover:scale-105 transition-all shadow-lg" style="background-color: var(--primary);">
+                        <i class="fas fa-phone rtl:ml-2 rtl:mr-0"></i> اتصل الآن
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-2xl" onclick="toggleMobileMenu()" style="color: var(--dark);">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden relative" id="mobile-menu" style="background-color: var(--bg); border-top: 2px solid var(--primary);">
+            <button onclick="closeMobileMenu()" class="absolute top-4 left-4 text-2xl z-10" style="color: var(--dark);">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="px-4 py-4 space-y-2">
+                <a href="index.html" class="block py-3 px-4 rounded-lg transition-all" onclick="closeMobileMenu()" style="color: var(--dark);">الرئيسية</a>
+                <a href="about.html" class="block py-3 px-4 rounded-lg transition-all" onclick="closeMobileMenu()" style="color: var(--dark);">من نحن</a>
+                <a href="games.html" class="block py-3 px-4 rounded-lg transition-all text-white" style="background-color: var(--primary);" onclick="closeMobileMenu()">ألعابنا</a>
+                <a href="pricing.html" class="block py-3 px-4 rounded-lg transition-all" onclick="closeMobileMenu()" style="color: var(--dark);">الأسعار</a>
+                <a href="jobs.html" class="block py-3 px-4 rounded-lg transition-all" onclick="closeMobileMenu()" style="color: var(--dark);">الوظائف</a>
+                <a href="gallery.html" class="block py-3 px-4 rounded-lg transition-all" onclick="closeMobileMenu()" style="color: var(--dark);">معرض الصور</a>
+                <a href="contact.html" class="block py-3 px-4 rounded-lg transition-all" onclick="closeMobileMenu()" style="color: var(--dark);">اتصل بنا</a>
+                <a href="tel:07716163020" class="block py-3 px-4 rounded-lg text-white text-center font-bold mt-4" style="background-color: var(--primary);" onclick="closeMobileMenu()">اتصل الآن</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-20 text-center mt-10" style="background: linear-gradient(135deg, var(--primary), #7C3AED); color: white;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-5xl md:text-6xl font-900 mb-4" data-aos="fade-up">ألعابنا المميزة</h1>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                اكتشف مجموعة متنوعة من الألعاب الترفيهية المناسبة لجميع الأعمار بأسعار منافسة وآمنة
+            </p>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section class="py-20" style="background-color: var(--bg);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- ألعاب 2000 دينار -->
+            <div class="mb-20">
+                <div class="text-center mb-12">
+                    <div class="inline-block px-6 py-3 rounded-full font-bold text-xl text-white" style="background: linear-gradient(135deg, var(--primary), #7C3AED);">
+                        <i class="fas fa-star rtl:ml-2 rtl:mr-0"></i> ألعاب 2,000 دينار - ألعاب بارزة
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- سفينة -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3" data-aos="fade-up">
+                        <img src="images/ship.jpg" alt="سفينة" class="w-full h-56 object-cover">
+                        <div class="p-6" style="background-color: white;">
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--dark);">سفينة نوح</h3>
+                            <p class="mb-4" style="color: #6B7280; font-size: 0.95rem;">لعبة شيقة للعائلة بأكملها</p>
+                            <div class="flex justify-center items-center">
+                                <span class="text-2xl font-bold text-white px-4 py-2 rounded-full" style="background: linear-gradient(135deg, var(--primary), #7C3AED);">د.ع 2,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- أخطبوط -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3" data-aos="fade-up" data-aos-delay="50">
+                        <img src="images/octopus.jpg" alt="الأخطبوط" class="w-full h-56 object-cover">
+                        <div class="p-6" style="background-color: white;">
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--dark);">الأخطبوط الدوار</h3>
+                            <p class="mb-4" style="color: #6B7280; font-size: 0.95rem;">لعبة دوارة مشهورة توفر إثارة لا تُنسى</p>
+                            <div class="flex justify-center items-center">
+                                <span class="text-2xl font-bold text-white px-4 py-2 rounded-full" style="background: linear-gradient(135deg, var(--primary), #7C3AED);">د.ع 2,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- سيارات التصادم -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3" data-aos="fade-up" data-aos-delay="100">
+                        <img src="images/bumper-cars.jpg" alt="سيارات التصادم" class="w-full h-56 object-cover">
+                        <div class="p-6" style="background-color: white;">
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--dark);">سيارات التصادم</h3>
+                            <p class="mb-4" style="color: #6B7280; font-size: 0.95rem;">لعبة تصادم آمنة وممتعة للجميع</p>
+                            <div class="flex justify-center items-center">
+                                <span class="text-2xl font-bold text-white px-4 py-2 rounded-full" style="background: linear-gradient(135deg, var(--primary), #7C3AED);">د.ع 2,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ميدان الرمي -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3" data-aos="fade-up" data-aos-delay="150">
+                        <img src="images/shooting.jpg" alt="ميدان الرمي" class="w-full h-56 object-cover">
+                        <div class="p-6" style="background-color: white;">
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--dark);">ميدان الرماية</h3>
+                            <p class="mb-4" style="color: #6B7280; font-size: 0.95rem;">لعبة الرمي الكلاسيكية التقليدية</p>
+                            <div class="flex justify-center items-center">
+                                <span class="text-2xl font-bold text-white px-4 py-2 rounded-full" style="background: linear-gradient(135deg, var(--primary), #7C3AED);">د.ع 2,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- المطرقة -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3" data-aos="fade-up" data-aos-delay="200">
+                        <img src="images/hammer.jpg" alt="المطرقة" class="w-full h-56 object-cover">
+                        <div class="p-6" style="background-color: white;">
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--dark);">المطرقة</h3>
+                            <p class="mb-4" style="color: #6B7280; font-size: 0.95rem;">اختبر قوتك ومهاراتك مع هذه اللعبة</p>
+                            <div class="flex justify-center items-center">
+                                <span class="text-2xl font-bold text-white px-4 py-2 rounded-full" style="background: linear-gradient(135deg, var(--primary), #7C3AED);">د.ع 2,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الديلاب الهواء -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3" data-aos="fade-up" data-aos-delay="250">
+                        <img src="images/carousel.jpg" alt="الديلاب الهواء" class="w-full h-56 object-cover">
+                        <div class="p-6" style="background-color: white;">
+                            <h3 class="text-xl font-bold mb-2" style="color: var(--dark);">الديلاب الهوائي</h3>
+                            <p class="mb-4" style="color: #6B7280; font-size: 0.95rem;">لعبة الدوران الكلاسيكية للعائلة</p>
+                            <div class="flex justify-center items-center">
+                                <span class="text-2xl font-bold text-white px-4 py-2 rounded-full" style="background: linear-gradient(135deg, var(--primary), #7C3AED);">د.ع 2,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ألعاب 1000 دينار -->
+            <div>
+                <div class="text-center mb-12">
+                    <div class="inline-block px-6 py-3 rounded-full font-bold text-xl text-white" style="background-color: var(--accent);">
+                        <i class="fas fa-heart rtl:ml-2 rtl:mr-0"></i> ألعاب 1,000 دينار - خيارات رائعة
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- لعبة الأرنب -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3" data-aos="fade-up">
+                        <img src="images/rabiit.jpg" alt="لعبة الأرنب" class="w-full h-48 object-cover">
+                        <div class="p-5" style="background-color: white;">
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--dark);">لعبة الأرنب</h3>
+                            <p class="text-sm mb-3" style="color: #6B7280;">للتزحلق والانزلاق</p>
+                            <div class="flex justify-center items-center">
+                                <span class="font-bold text-lg text-white px-3 py-1 rounded-full" style="background-color: var(--primary);">د.ع 1,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الترانبولين -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3" data-aos="fade-up" data-aos-delay="50">
+                        <img src="images/trampoline.jpg" alt="الترانبولين" class="w-full h-48 object-cover">
+                        <div class="p-5" style="background-color: white;">
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--dark);">الترانبولين</h3>
+                            <p class="text-sm mb-3" style="color: #6B7280;">القفز والارتفاع العالي</p>
+                            <div class="flex justify-center items-center">
+                                <span class="font-bold text-lg text-white px-3 py-1 rounded-full" style="background-color: var(--primary);">د.ع 1,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الاكتشاف -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3" data-aos="fade-up" data-aos-delay="100">
+                        <img src="images/train.jpg" alt="القطار" class="w-full h-48 object-cover">
+                        <div class="p-5" style="background-color: white;">
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--dark);">قطار المتعة</h3>
+                            <p class="text-sm mb-3" style="color: #6B7280;">رحلة ممتعة آمنة</p>
+                            <div class="flex justify-center items-center">
+                                <span class="font-bold text-lg text-white px-3 py-1 rounded-full" style="background-color: var(--primary);">د.ع 1,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- القطار -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3" data-aos="fade-up" data-aos-delay="150">
+                        <img src="images/ducks.jpg" alt="البطات" class="w-full h-48 object-cover">
+                        <div class="p-5" style="background-color: white;">
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--dark);">البطات</h3>
+                            <p class="text-sm mb-3" style="color: #6B7280;">لعبة الذوق والمهارة</p>
+                            <div class="flex justify-center items-center">
+                                <span class="font-bold text-lg text-white px-3 py-1 rounded-full" style="background-color: var(--primary);">د.ع 1,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الأحصنة -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3" data-aos="fade-up" data-aos-delay="200">
+                        <img src="images/horses.jpg" alt="الأحصنة" class="w-full h-48 object-cover">
+                        <div class="p-5" style="background-color: white;">
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--dark);">ركوب الخيل</h3>
+                            <p class="text-sm mb-3" style="color: #6B7280;">تجربة الركوب الكلاسيكية</p>
+                            <div class="flex justify-center items-center">
+                                <span class="font-bold text-lg text-white px-3 py-1 rounded-full" style="background-color: var(--primary);">د.ع 1,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- الكريزي -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3" data-aos="fade-up" data-aos-delay="250">
+                        <img src="images/crazy.jpg" alt="الكريزي" class="w-full h-48 object-cover">
+                        <div class="p-5" style="background-color: white;">
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--dark);">الكريزي الدوار</h3>
+                            <p class="text-sm mb-3" style="color: #6B7280;">لعبة دوارة مثيرة وآمنة</p>
+                            <div class="flex justify-center items-center">
+                                <span class="font-bold text-lg text-white px-3 py-1 rounded-full" style="background-color: var(--primary);">د.ع 1,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- السلاسل -->
+                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3" data-aos="fade-up" data-aos-delay="300">
+                        <img src="images/chains.jpg" alt="السلاسل" class="w-full h-48 object-cover">
+                        <div class="p-5" style="background-color: white;">
+                            <h3 class="text-lg font-bold mb-2" style="color: var(--dark);">لعبة السلاسل</h3>
+                            <p class="text-sm mb-3" style="color: #6B7280;">لعبة الارتفاع والتأرجح</p>
+                            <div class="flex justify-center items-center">
+                                <span class="font-bold text-lg text-white px-3 py-1 rounded-full" style="background-color: var(--primary);">د.ع 1,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact CTA -->
+            <div class="text-center mt-20" data-aos="fade-up">
+                <div class="rounded-3xl p-12 text-white" style="background: linear-gradient(135deg, var(--primary), #7C3AED);">
+                    <h3 class="text-3xl font-bold mb-4">هل تريد الاستمتاع بتجاربك معنا؟</h3>
+                    <p class="text-lg opacity-90 mb-8">تواصل معنا الآن للحجز والاستفسار عن آخر العروض</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="tel:07716163020" class="px-8 py-3 rounded-full font-bold transition-all hover:scale-105" style="background-color: var(--accent); color: var(--dark);">
+                            <i class="fas fa-phone rtl:ml-2 rtl:mr-0"></i> 07716163020
+                        </a>
+                        <a href="contact.html" class="px-8 py-3 rounded-full font-bold border-2 border-white text-white transition-all hover:bg-white hover:text-purple-900">
+                            <i class="fas fa-envelope rtl:ml-2 rtl:mr-0"></i> تواصل معنا
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: linear-gradient(135deg, #1a1a2e, #16213e);" class="text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center space-x-3 rtl:space-x-reverse mb-6">
+                        <img src="images/logo.jpg" alt="مدينة العاب نور المقدادية" class="w-12 h-12 rounded-full object-cover shadow-md">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">مدينة العاب</h3>
+                            <p class="font-semibold" style="color: var(--accent);">نور المقدادية</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        الوجهة الأولى للترفيه العائلي الآمن والممتع في محافظة ديالى. نقدم أفضل تجارب اللعب لجميع الأعمار.
+                    </p>
+                    <div class="flex space-x-4 rtl:space-x-reverse">
+                        <a href="https://www.facebook.com/share/1DH9Xn3jEL/?mibextid=wwXIfr" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center text-white transition-all hover:scale-110" style="background: #1877F2;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/noorlnand?igsh=Y3RtYmtpMm1sZTc1&utm_source=qr" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center text-white transition-all hover:scale-110" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@noorlnand?_r=1&_t=ZS-93yUzJuXOxJ" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center text-white transition-all hover:scale-110" style="background: #000000;"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/9647716163020" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center text-white transition-all hover:scale-110" style="background: #25D366;"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">روابط سريعة</h4>
+                    <ul class="space-y-3" style="color: #9CA3AF;">
+                        <li><a href="index.html" class="hover:text-white transition-colors" style="color: var(--accent);">الرئيسية</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors" style="color: var(--accent);">من نحن</a></li>
+                        <li><a href="games.html" class="hover:text-white transition-colors" style="color: var(--accent);">ألعابنا</a></li>
+                        <li><a href="gallery.html" class="hover:text-white transition-colors" style="color: var(--accent);">معرض الصور</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors" style="color: var(--accent);">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">معلومات أساسية</h4>
+                    <ul class="space-y-4" style="color: #9CA3AF;">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-map-marker-alt" style="color: var(--accent);"></i>
+                            <span>العراق - ديالى - المقدادية</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone" style="color: var(--accent);"></i>
+                            <span>07716163020</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope" style="color: var(--accent);"></i>
+                            <span>nouralmuqdadiya@gmail.com</span>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- Hours -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">ساعات العمل</h4>
+                    <ul class="space-y-3" style="color: #9CA3AF;">
+                        <li class="flex justify-between"><span>جميع ايام الأسبوع</span> <strong style="color: var(--primary);">من 2:00 م - 12:00 ص</strong></li>
+                       
+                        <li class="mt-6 pt-6 border-t border-gray-700">
+                            <p class="text-sm">متاح للحجز الجماعي والحفلات الخاصة</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Newsletter -->
+            <div class="mt-12">
+                <div class="bg-white/5 rounded-2xl p-8">
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h4 class="text-xl font-bold text-white mb-2">النشرة البريدية</h4>
+                            <p class="text-gray-400">اشترك للحصول على أحدث العروض والأخبار</p>
+                        </div>
+                        <form class="flex gap-3">
+                            <input type="email" placeholder="بريدك الإلكتروني" class="flex-1 px-4 py-3 rounded-lg bg-white/10 text-white placeholder-gray-400 border border-gray-600 focus:border-primary focus:outline-none">
+                            <button type="submit" class="px-6 py-3 rounded-lg font-bold text-white transition-all" style="background-color: var(--primary);">اشترك</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 pt-8 text-center" style="color: #9CA3AF;">
+                <p>جميع الحقوق محفوظة. لدى مدينه العاب نور المقدادية 2026 ©</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="fixed bottom-8 left-8 z-50 animate-bounce" style="animation: float 3s ease-in-out infinite;">
+        <a href="https://wa.me/9647740444047" target="_blank" class="w-16 h-16 rounded-full flex items-center justify-center text-white text-3xl hover:scale-110 transition-all shadow-lg" style="background: #25D366;">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: true
+        });
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.add('hidden');
+        }
+
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

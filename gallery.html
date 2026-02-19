@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="معرض صور وفيديوهات مدينة ألعاب نور المقدادية - اكتشف لحظات المرح والمتعة">
+    <meta name="keywords" content="معرض صور, فيديوهات, مدينة ألعاب, نور المقدادية, Diyala">
+
+    <title>معرض الصور | مدينه العاب نور المقدادية</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>NO</text></svg>">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6D28D9',
+                        secondary: '#7C3AED',
+                        accent: '#F59E0B',
+                        dark: '#1F2937',
+                        light: '#fbf2d5',
+                    },
+                    fontFamily: {
+                        arabic: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-arabic" style="background-color: #fbf2d5;">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 shadow-md" id="navbar" style="background-color: #fbf2d5; border-bottom: 2px solid #6D28D9;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="images/logo.jpg" alt="مدينة العاب نور المقدادية" class="w-12 h-12 rounded-full object-cover shadow-md">
+                    <div>
+                        <h1 class="text-xl font-bold text-dark">مدينة العاب</h1>
+                        <p class="text-sm text-primary font-semibold">نور المقدادية</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-1 rtl:space-x-reverse">
+                    <a href="index.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">الرئيسية</a>
+                    <a href="about.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">من نحن</a>
+                    <a href="games.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">ألعابنا</a>
+                    <a href="gallery.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all bg-primary/10 text-primary">معرض الصور</a>
+                    <a href="testimonials.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">آراء العملاء</a>
+                    <a href="contact.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">اتصل بنا</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="tel:07716163020" class="bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-violet-700 transition-all transform hover:scale-105 shadow-lg">
+                        اتصل الآن: 07716163020 <i class="fas fa-phone rtl:ml-2 rtl:mr-0"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-2xl text-dark" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="px-4 py-4 space-y-2">
+                <a href="index.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">الرئيسية</a>
+                <a href="about.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">من نحن</a>
+                <a href="games.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">ألعابنا</a>
+                <a href="contact.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">اتصل بنا</a>
+                <a href="tel:07716163020" class="block bg-primary text-white py-3 px-4 rounded-lg text-center font-bold mt-4" onclick="closeMobileMenu()">اتصل الآن</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4" data-aos="fade-up">
+                معرض <span class="text-primary">الصور</span>
+            </h1>
+            <p class="text-xl text-white/80 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                اكتشف لحظات المرح والمتعة التي ينتظرها زوارنا
+            </p>
+        </div>
+        <!-- Wave Divider -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-16">
+                <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120 240 120 120 60 120H0Z" fill="#F3F4F6"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">
+                    صور <span class="text-primary">الألعاب</span>
+                </h2>
+                <p class="text-gray-600">اضغط على أي صورة لتكبيرها</p>
+            </div>
+
+            <!-- Photo Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid">
+                <!-- سفينة نوح -->
+                <div class="gallery-item group cursor-pointer" data-aos="fade-up" data-aos-delay="100" onclick="openLightbox('images/ship.jpg', 'سفينة نوح')">
+                    <div class="aspect-square bg-gray-300 rounded-xl overflow-hidden relative">
+                        <img src="images/ship.jpg" alt="سفينة نوح" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <p class="text-center mt-2 font-semibold text-dark">سفينة نوح</p>
+                </div>
+
+                <!-- الأخطبوط الدوار -->
+                <div class="gallery-item group cursor-pointer" data-aos="fade-up" data-aos-delay="150" onclick="openLightbox('images/octopus.jpg', 'الأخطبوط الدوار')">
+                    <div class="aspect-square bg-gray-300 rounded-xl overflow-hidden relative">
+                        <img src="images/octopus.jpg" alt="الأخطبوط الدوار" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <p class="text-center mt-2 font-semibold text-dark">الأخطبوط الدوار</p>
+                </div>
+
+                <!-- سيارات التصادم -->
+                <div class="gallery-item group cursor-pointer" data-aos="fade-up" data-aos-delay="200" onclick="openLightbox('images/bumper-cars.jpg', 'سيارات التصادم')">
+                    <div class="aspect-square bg-gray-300 rounded-xl overflow-hidden relative">
+                        <img src="images/bumper-cars.jpg" alt="سيارات التصادم" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <p class="text-center mt-2 font-semibold text-dark">سيارات التصادم</p>
+                </div>
+
+                <!-- ميدان الرماية -->
+                <div class="gallery-item group cursor-pointer" data-aos="fade-up" data-aos-delay="250" onclick="openLightbox('images/shooting.jpg', 'ميدان الرماية')">
+                    <div class="aspect-square bg-gray-300 rounded-xl overflow-hidden relative">
+                        <img src="images/shooting.jpg" alt="ميدان الرماية" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <p class="text-center mt-2 font-semibold text-dark">ميدان الرماية</p>
+                </div>
+
+                <!-- القطار -->
+                <div class="gallery-item group cursor-pointer" data-aos="fade-up" data-aos-delay="300" onclick="openLightbox('images/train.jpg', 'القطار')">
+                    <div class="aspect-square bg-gray-300 rounded-xl overflow-hidden relative">
+                        <img src="images/train.jpg" alt="القطار" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <p class="text-center mt-2 font-semibold text-dark">القطار</p>
+                </div>
+
+                <!-- المطرقة -->
+                <div class="gallery-item group cursor-pointer" data-aos="fade-up" data-aos-delay="350" onclick="openLightbox('images/hammer.jpg', 'المطرقة')">
+                    <div class="aspect-square bg-gray-300 rounded-xl overflow-hidden relative">
+                        <img src="images/hammer.jpg" alt="المطرقة" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <p class="text-center mt-2 font-semibold text-dark">المطرقة</p>
+                </div>
+
+                <!-- الديلاب الهواء -->
+                <div class="gallery-item group cursor-pointer" data-aos="fade-up" data-aos-delay="400" onclick="openLightbox('images/carousel.jpg', 'الديلاب الهواء')">
+                    <div class="aspect-square bg-gray-300 rounded-xl overflow-hidden relative">
+                        <img src="images/carousel.jpg" alt="الديلاب الهواء" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <p class="text-center mt-2 font-semibold text-dark">الديلاب الهواء</p>
+                </div>
+
+                <!-- لعبة الأرنب -->
+                <div class="gallery-item group cursor-pointer" data-aos="fade-up" data-aos-delay="450" onclick="openLightbox('images/rabiit.jpg', 'لعبة الأرنب')">
+                    <div class="aspect-square bg-gray-300 rounded-xl overflow-hidden relative">
+                        <img src="images/rabiit.jpg" alt="لعبة الأرنب" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <p class="text-center mt-2 font-semibold text-dark">لعبة الأرنب</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-16 bg-gradient-to-r from-primary to-violet-600">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">هل أنت مستعد للمتعة؟</h2>
+            <p class="text-white/90 mb-6">احجز لعبتك المفضلة الآن واستمتع بيوم رائع!</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:07716163020" class="bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-all">
+                    <i class="fas fa-phone rtl:ml-2 rtl:mr-0"></i> 07716163020
+                </a>
+                <a href="contact.html" class="bg-white/20 text-white border-2 border-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-primary transition-all">
+                    تواصل معنا
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center space-x-3 rtl:space-x-reverse mb-6">
+                        <img src="images/logo.jpg" alt="مدينة العاب نور المقدادية" class="w-12 h-12 rounded-full object-cover shadow-md">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">مدينه العاب</h3>
+                            <p class="text-primary font-semibold">نور المقدادية</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        الوجهة الأولى للترفيه العائلي في Diyala. نوفر أفضل التجارب الممتعة والآمنة لجميع الأعمار.
+                    </p>
+                    <div class="flex space-x-4 rtl:space-x-reverse">
+                        <a href="https://www.facebook.com/share/1DH9Xn3jEL/?mibextid=wwXIfr" target="_blank" class="social-link social-facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/noorlnand?igsh=Y3RtYmtpMm1sZTc1&utm_source=qr" target="_blank" class="social-link social-instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@noorlnand?_r=1&_t=ZS-93yUzJuXOxJ" target="_blank" class="social-link" style="background: #000000;"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/9647716163020" target="_blank" class="social-link social-whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">روابط سريعة</h4>
+                    <ul class="space-y-3 footer-links">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">الرئيسية</a></li>
+                        <li><a href="gallery.html" class="hover:text-primary transition-colors">معرض الصور</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">معلومات أساسية</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-map-marker-alt text-primary"></i>
+                            <span>العراق - ديالى - المقدادية</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone text-primary"></i>
+                            <span>07740444047</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span>nouralmuqdadiya@gmail.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-clock text-primary"></i>
+                            <span>يومياً: 2:00 م - 12:00 ص</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">النشرة البريدية</h4>
+                    <p class="text-gray-400 mb-4">اشترك للحصول على أحدث العروض والأخبار</p>
+                    <form id="newsletter-form" class="space-y-3">
+                        <input type="email" placeholder="بريدك الإلكتروني" class="w-full px-4 py-3 rounded-lg newsletter-input">
+                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-bold hover:bg-orange-600 transition-all">
+                            اشترك
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">
+                    جميع الحقوق محفوظة. لدى مدينه العاب نور المقدادية 2026 ©
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/9647740444047" target="_blank" aria-label="تواصل عبر واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox hidden" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">
+                <i class="fas fa-times"></i>
+            </button>
+            <img src="" alt="" id="lightbox-img" class="lightbox-img">
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

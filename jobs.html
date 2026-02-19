@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="انضم لفريق مدينة ألعاب نور المقدادية - توظيف وفرص عمل">
+    <meta name="keywords" content="وظائف, توظيف, عمل, مدينة ألعاب, نور المقدادية">
+    
+    <title>الوظائف والتوظيف | مدينه العاب نور المقدادية</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>NO</text></svg>">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6D28D9',
+                        secondary: '#7C3AED',
+                        accent: '#F59E0B',
+                        dark: '#1F2937',
+                        light: '#fbf2d5',
+                    },
+                    fontFamily: {
+                        arabic: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-arabic" style="background-color: #fbf2d5;">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 shadow-md" id="navbar" style="background-color: #fbf2d5; border-bottom: 2px solid #6D28D9;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="images/logo.jpg" alt="مدينة العاب نور المقدادية" class="w-12 h-12 rounded-full object-cover shadow-md">
+                    <div>
+                        <h1 class="text-xl font-bold text-dark">مدينه العاب</h1>
+                        <p class="text-sm text-primary font-semibold">نور المقدادية</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-1 rtl:space-x-reverse">
+                    <a href="index.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">الرئيسية</a>
+                    <a href="about.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">من نحن</a>
+                    <a href="games.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">ألعابنا</a>
+                    <a href="pricing.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">الأسعار</a>
+                    <a href="jobs.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all bg-primary/10 text-primary">الوظائف</a>
+                    <a href="gallery.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">معرض الصور</a>
+                    <a href="testimonials.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">آراء العملاء</a>
+                    <a href="contact.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">اتصل بنا</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="tel:07716163020" class="bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-violet-700 transition-all transform hover:scale-105 shadow-lg">
+                        اتصل الآن: 07716163020 <i class="fas fa-phone rtl:ml-2 rtl:mr-0"></i>
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-2xl text-dark" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="px-4 py-4 space-y-2">
+                <a href="index.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">الرئيسية</a>
+                <a href="about.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">من نحن</a>
+                <a href="games.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">ألعابنا</a>
+                <a href="pricing.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">الأسعار</a>
+                <a href="jobs.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">الوظائف</a>
+                <a href="gallery.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">معرض الصور</a>
+                <a href="testimonials.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">آراء العملاء</a>
+                <a href="contact.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">اتصل بنا</a>
+                <a href="tel:07716163020" class="block bg-primary text-white py-3 px-4 rounded-lg text-center font-bold mt-4" onclick="closeMobileMenu()">اتصل الآن</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4" data-aos="fade-up">
+                انضم إلى فريقنا <span class="text-accent">الآن</span>
+            </h1>
+            <p class="text-xl text-white/80 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                نبحث عن أفراد موهوبين ومتحمسين للعمل في مدينة ألعاب نور المقدادية
+            </p>
+        </div>
+        <!-- Wave Divider -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-16">
+                <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#ECF0F1"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Job Opportunities Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    فرص عمل متاحة
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-dark mb-4">
+                    الوظائف <span class="text-primary">المتاحة</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    لدينا عدة فرص عمل مشوقة. اختر الوظيفة التي تناسبك وتقدم الآن!
+                </p>
+            </div>
+            
+            <!-- Job Cards -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Job 1 -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-gray-100 hover:border-primary/50 transition-all shadow-lg hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-3xl">🎠</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-3">مشرف الألعاب</h3>
+                    <p class="text-gray-600 mb-4">الإشراف على تشغيل وصيانة الألعاب والتأكد من سلامة الزوار</p>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-green-500 ml-2"></i>راتب منافس</li>
+                        <li><i class="fas fa-check text-green-500 ml-2"></i>بيئة عمل متميزة</li>
+                        <li><i class="fas fa-check text-green-500 ml-2"></i>تدريب مستمر</li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-3 rounded-full font-bold hover:bg-violet-700 transition-all" onclick="scrollToForm()">
+                        تقدم الآن
+                    </button>
+                </div>
+                
+
+
+                <!-- Job 4 -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-gray-100 hover:border-primary/50 transition-all shadow-lg hover:shadow-xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-3xl">🧹</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-3">موظف النظافة</h3>
+                    <p class="text-gray-600 mb-4">الحفاظ على نظافة المدينة الترفيهية بكفاءة وسرعة</p>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-green-500 ml-2"></i>ملابس عمل موحدة</li>
+                        <li><i class="fas fa-check text-green-500 ml-2"></i>أدوات حديثة</li>
+                        <li><i class="fas fa-check text-green-500 ml-2"></i>أوقات مرنة</li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-3 rounded-full font-bold hover:bg-violet-700 transition-all" onclick="scrollToForm()">
+                        تقدم الآن
+                    </button>
+                </div>
+
+                <!-- Job 5 -->
+                <div class="bg-white rounded-3xl p-8 border-2 border-gray-100 hover:border-primary/50 transition-all shadow-lg hover:shadow-xl" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mb-6">
+                        <span class="text-3xl">🎨</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-3">منسق الأنشطة</h3>
+                    <p class="text-gray-600 mb-4">تنظيم الفعاليات والأنشطة الترفيهية والحفلات</p>
+                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                        <li><i class="fas fa-check text-green-500 ml-2"></i>راتب جيد</li>
+                        <li><i class="fas fa-check text-green-500 ml-2"></i>تطوير ذاتي</li>
+                        <li><i class="fas fa-check text-green-500 ml-2"></i>فرص ترقي</li>
+                    </ul>
+                    <button class="w-full bg-primary text-white py-3 rounded-full font-bold hover:bg-violet-700 transition-all" onclick="scrollToForm()">
+                        تقدم الآن
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section class="py-20 bg-white" id="application-form">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <div class="inline-block bg-secondary/20 text-secondary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    نموذج التقديم
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-dark mb-4">
+                    تقدم لوظيفة <span class="text-primary">الآن</span>
+                </h2>
+                <p class="text-lg text-gray-600">
+                    املأ جميع البيانات المطلوبة بدقة
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12" data-aos="fade-up">
+                <form id="job-application-form" class="space-y-6">
+                    <!-- Personal Information -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-dark mb-6 pb-4 border-b-2 border-primary">
+                            <i class="fas fa-user-circle text-primary ml-2"></i>البيانات الشخصية
+                        </h3>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-dark mb-2">الاسم الكامل *</label>
+                                <input type="text" name="name" required class="form-input" placeholder="أدخل اسمك الكامل">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-dark mb-2">العمر *</label>
+                                <input type="number" name="age" required class="form-input" placeholder="أدخل سنك" min="18" max="70">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6 mt-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-dark mb-2">رقم الهاتف *</label>
+                                <input type="tel" name="phone" required class="form-input" placeholder="07700000000">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-dark mb-2">الحالة الاجتماعية *</label>
+                                <select name="marital_status" required class="form-input">
+                                    <option value="">اختر الحالة الاجتماعية</option>
+                                    <option value="أعزب">أعزب</option>
+                                    <option value="متزوج">متزوج</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6 mt-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-dark mb-2">العنوان/المكان *</label>
+                                <input type="text" name="address" required class="form-input" placeholder="أدخل عنوانك كاملاً">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-dark mb-2">رقم الهوية/الجواز *</label>
+                                <input type="text" name="id_number" required class="form-input" placeholder="رقم الهوية">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Work Experience -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-dark mb-6 pb-4 border-b-2 border-primary">
+                            <i class="fas fa-briefcase text-primary ml-2"></i>الخبرة والمؤهلات
+                        </h3>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-dark mb-2">الوظيفة المتقدم لها *</label>
+                            <select name="job_position" required class="form-input">
+                                <option value="">اختر الوظيفة</option>
+                                <option value="مشرف الألعاب">مشرف الألعاب</option>
+                                <option value="موظف النظافة">موظف النظافة</option>
+                                <option value="منسق الأنشطة">منسق الأنشطة</option>
+                            </select>
+                        </div>
+
+                        <div class="mt-6">
+                            <label class="block text-sm font-semibold text-dark mb-2">الخبرة السابقة</label>
+                            <textarea name="experience" rows="4" class="form-input" placeholder="اذكر خبراتك السابقة والوظائف التي عملت بها..."></textarea>
+                        </div>
+
+                        <div class="mt-6">
+                            <label class="block text-sm font-semibold text-dark mb-2">المهارات والمؤهلات</label>
+                            <textarea name="skills" rows="4" class="form-input" placeholder="اكتب مهاراتك الخاصة والشهادات التي تمتلكها..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Documents -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-dark mb-6 pb-4 border-b-2 border-primary">
+                            <i class="fas fa-file-upload text-primary ml-2"></i>رفع المستندات والصور
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-dark mb-3">
+                                    <i class="fas fa-id-card text-primary ml-2"></i>صورة الهوية - الوجه *
+                                </label>
+                                <div class="border-2 border-dashed border-primary rounded-lg p-6 text-center cursor-pointer hover:bg-primary/5 transition-all" onclick="document.getElementById('id_front').click()">
+                                    <input type="file" id="id_front" name="id_front" accept="image/*" required class="hidden" onchange="updateFileName(this, 'id_front_name')">
+                                    <i class="fas fa-cloud-upload-alt text-4xl text-primary mb-3"></i>
+                                    <p class="text-dark font-semibold">اضغط أو اسحب صورة الهوية - الوجه</p>
+                                    <p class="text-gray-500 text-sm mt-1" id="id_front_name">لم يتم اختيار ملف</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-dark mb-3">
+                                    <i class="fas fa-id-card text-primary ml-2"></i>صورة الهوية - الخلفية *
+                                </label>
+                                <div class="border-2 border-dashed border-primary rounded-lg p-6 text-center cursor-pointer hover:bg-primary/5 transition-all" onclick="document.getElementById('id_back').click()">
+                                    <input type="file" id="id_back" name="id_back" accept="image/*" required class="hidden" onchange="updateFileName(this, 'id_back_name')">
+                                    <i class="fas fa-cloud-upload-alt text-4xl text-primary mb-3"></i>
+                                    <p class="text-dark font-semibold">اضغط أو اسحب صورة الهوية - الخلفية</p>
+                                    <p class="text-gray-500 text-sm mt-1" id="id_back_name">لم يتم اختيار ملف</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-semibold text-dark mb-3">
+                                    <i class="fas fa-image text-primary ml-2"></i>صورة شخصية حديثة (اختياري)
+                                </label>
+                                <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center cursor-pointer hover:bg-gray-50 transition-all" onclick="document.getElementById('photo').click()">
+                                    <input type="file" id="photo" name="photo" accept="image/*" class="hidden" onchange="updateFileName(this, 'photo_name')">
+                                    <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-3"></i>
+                                    <p class="text-dark font-semibold">اضغط أو اسحب صورة شخصية</p>
+                                    <p class="text-gray-500 text-sm mt-1" id="photo_name">لم يتم اختيار ملف</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-dark mb-6 pb-4 border-b-2 border-primary">
+                            <i class="fas fa-pencil-alt text-primary ml-2"></i>شروط وملاحظات
+                        </h3>
+                        
+                        <div>
+                            <label class="block text-sm font-semibold text-dark mb-2">ملاحظات إضافية</label>
+                            <textarea name="notes" rows="3" class="form-input" placeholder="أي معلومات إضافية تود إضافتها..."></textarea>
+                        </div>
+
+                        <div class="mt-6 flex items-start gap-3">
+                            <input type="checkbox" id="terms" name="terms" required class="mt-1">
+                            <div>
+                                <label for="terms" class="text-gray-600">
+                                    أوافق على شروط التقديم والخصوصية وأؤكد على صحة البيانات المدخلة
+                                </label>
+                                <p class="text-red-500 text-sm mt-2 font-semibold">
+                                    <i class="fas fa-exclamation-triangle ml-1"></i>
+                                    في حال وجود أي معلومات غير صحيحة, سيتم رفض طلب الوضيفة
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full bg-primary text-white py-4 rounded-full font-bold hover:bg-violet-700 transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-paper-plane rtl:ml-2 rtl:mr-0"></i>
+                        إرسال الطلب
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center space-x-3 rtl:space-x-reverse mb-6">
+                        <img src="images/logo.jpg" alt="مدينة العاب نور المقدادية" class="w-12 h-12 rounded-full object-cover shadow-md">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">مدينه العاب</h3>
+                            <p class="text-primary font-semibold">نور المقدادية</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        الوجهة الأولى للترفيه العائلي في Diyala. نوفر أفضل التجارب الممتعة والآمنة لجميع الأعمار.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">روابط سريعة</h4>
+                    <ul class="space-y-3 footer-links">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">الرئيسية</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">من نحن</a></li>
+                        <li><a href="games.html" class="hover:text-primary transition-colors">ألعابنا</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary transition-colors">الأسعار</a></li>
+                        <li><a href="jobs.html" class="hover:text-primary transition-colors">الوظائف</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">معلومات أساسية</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-map-marker-alt text-primary"></i>
+                            <span>العراق - ديالى - المقدادية</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone text-primary"></i>
+                            <span>07740444047</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span>nouralmuqdadiya@gmail.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-clock text-primary"></i>
+                            <span>يومياً: 2:00 م - 12:00 ص</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">النشرة البريدية</h4>
+                    <p class="text-gray-400 mb-4">اشترك للحصول على أحدث فرص العمل</p>
+                    <form id="newsletter-form" class="space-y-3">
+                        <input type="email" placeholder="بريدك الإلكتروني" class="w-full px-4 py-3 rounded-lg newsletter-input">
+                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-bold hover:bg-violet-700 transition-all">
+                            اشترك
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">
+                    جميع الحقوق محفوظة. لدى مدينه العاب نور المقدادية 2026 ©
+                </p>
+                <!-- Admin Button -->
+                <div class="mt-4">
+                    <a href="admin.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all transform hover:scale-105">
+                        <i class="fas fa-cog"></i>
+                        لوحة التحكم
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/job-form-handler.js"></script>
+    <script>
+        function scrollToForm() {
+            document.getElementById('application-form').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function updateFileName(input, displayId) {
+            const fileName = input.files[0]?.name || 'لم يتم اختيار ملف';
+            document.getElementById(displayId).textContent = fileName;
+        }
+
+        // Mobile menu functions
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+
+        // Initialize AOS
+        AOS.init();
+    </script>
+</body>
+</html>

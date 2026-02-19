@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تعرف على مدينة ألعاب نور المقدادية - الوجهة الأولى للترفيه العائلي في Diyala, العراق">
+    <meta name="keywords" content="مدينة ألعاب, نور المقدادية, من نحن, ترفيه, العراق">
+    <meta name="author" content="مدينه العاب نور المقدادية">
+
+    <title>من نحن | مدينه العاب نور المقدادية</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%236F4E37'>NO</text></svg>">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6F4E37',
+                        secondary: '#8B6F5A',
+                        accent: '#F59E0B',
+                        dark: '#1F2937',
+                        light: '#fbf2d5',
+                    },
+                    fontFamily: {
+                        arabic: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-arabic" style="background-color: #fbf2d5;">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 shadow-md" style="background-color: #fbf2d5; border-bottom: 2px solid #6F4E37;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="images/logo.jpg" alt="مدينة العاب نور المقدادية" class="w-12 h-12 rounded-full object-cover shadow-md">
+                    <div>
+                        <h1 class="text-xl font-bold" style="color: #1F2937;">مدينة العاب</h1>
+                        <p class="text-sm font-semibold" style="color: #6F4E37;">نور المقدادية</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-1 rtl:space-x-reverse">
+                    <a href="index.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">الرئيسية</a>
+                    <a href="about.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all bg-primary/10 text-primary">من نحن</a>
+                    <a href="games.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">ألعابنا</a>
+                    <a href="pricing.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">الأسعار</a>
+                    <a href="jobs.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">الوظائف</a>
+                    <a href="gallery.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">معرض الصور</a>
+                    <a href="testimonials.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">آراء العملاء</a>
+                    <a href="contact.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">اتصل بنا</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="tel:07716163020" class="bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-violet-700 transition-all transform hover:scale-105 shadow-lg">
+                        اتصل الآن: 07716163020 <i class="fas fa-phone rtl:ml-2 rtl:mr-0"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-2xl text-dark" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="px-4 py-4 space-y-2">
+                <a href="index.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">الرئيسية</a>
+                <a href="about.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">من نحن</a>
+                <a href="games.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">ألعابنا</a>
+                <a href="pricing.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">الأسعار</a>
+                <a href="jobs.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">الوظائف</a>
+                <a href="gallery.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">معرض الصور</a>
+                <a href="contact.html" class="block py-3 px-4 rounded-lg hover:bg-primary hover:text-white transition-all" onclick="closeMobileMenu()">اتصل بنا</a>
+                <a href="pricing.html" class="block bg-primary text-white py-3 px-4 rounded-lg text-center font-bold mt-4" onclick="closeMobileMenu()">احجز الآن</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4" data-aos="fade-up">
+                من <span class="text-primary">ن</span>حنا
+            </h1>
+            <p class="text-xl text-white/80 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                تعرف على قصة نجاحتنا ورؤيتنا في تقديم أفضل تجربة ترفيهية للعائلات في Diyala
+            </p>
+        </div>
+        <!-- Wave Divider -->
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-16">
+                <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120 240 120 120 120 60 120H0Z" fill="#ECF0F1"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-left">
+                    <div class="relative">
+                        <!-- Main Image -->
+                        <div class="bg-gradient-to-br from-primary to-secondary rounded-3xl p-2">
+                            <div class="bg-white rounded-2xl overflow-hidden h-96">
+                                <img src="images/city-aerial.jpg" alt="مدينة الألعاب" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3" data-aos="fade-up" data-aos-delay="200">
+                            <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-check text-green-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">مسجل ومرخص</p>
+                                <p class="font-bold text-dark">أفضل مدينة ألعاب</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-right">
+                    <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                        من نحن
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold text-dark mb-6">
+                        استمتع بالمرح في <span class="text-primary">نور المقدادية</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        مدينة ألعاب نور المقدادية هي واحدة من أبرز الوجهات الترفيهية في محافظة ديالى، حيث نسعى لتقديم تجربة ممتعة وآمنة تناسب جميع أفراد العائلة. تأسست مدينتنا برؤية واضحة تهدف إلى توفير بيئة ترفيهية متكاملة تجمع بين المتعة، الأمان، والتنظيم العالي.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        نحرص على تقديم مجموعة متنوعة من الألعاب التي تناسب الأطفال والشباب، إضافةً إلى توفير مساحات مريحة للعوائل وأجواء مميزة تضفي طابعاً خاصاً على كل زيارة. كما نعمل باستمرار على تطوير خدماتنا وتحسين مرافقنا لضمان أفضل تجربة ممكنة لزوارنا الكرام.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        في مدينة ألعاب نور المقدادية، لا نقدم ألعاباً فقط، بل نصنع ذكريات جميلة تبقى مع العائلة والأصدقاء. هدفنا أن تكون مدينتنا المكان الأول للترفيه في المقدادية وديالى، وأن نحافظ دائماً على ثقة جمهورنا من خلال الجودة والاهتمام بأدق التفاصيل.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        أهلاً وسهلاً بكم في مدينة ألعاب نور المقدادية… حيث تبدأ المتعة 🌟
+                    </p>
+
+                    <!-- Features -->
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-shield-alt text-green-500"></i>
+                            </div>
+                            <span class="font-semibold text-dark">أمان مُضمون</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-star text-blue-500"></i>
+                            </div>
+                            <span class="font-semibold text-dark">جودة عالية</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-users text-purple-500"></i>
+                            </div>
+                            <span class="font-semibold text-dark">فريق محترف</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-heart text-orange-500"></i>
+                            </div>
+                            <span class="font-semibold text-dark">خدمة مميزة</span>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="inline-flex items-center bg-dark text-white px-8 py-4 rounded-full font-bold hover:bg-gray-800 transition-all transform hover:scale-105 shadow-lg">
+                        تواصل معنا
+                        <i class="fas fa-arrow-left rtl:ml-2 rtl:mr-0"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Mission -->
+                <div class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-3xl p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-bullseye text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">رسالتنا</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        نلتزم بتقديم تجربة ترفيهية آمنة وممتعة للعائلات والأطفال، حيث نوفر بيئة عائلية دافئة تجمع بين المرح والتحدي. نسعى دائماً لتحديث وتطوير ألعابنا لضمان تقديم أفضل وأحدث التجارب الترفيهية.
+                    </p>
+                </div>
+
+                <!-- Vision -->
+                <div class="bg-gradient-to-br from-secondary/10 to-accent/10 rounded-3xl p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-eye text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mb-4">رؤيتنا</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        نسعى لنكون الوجهة الأولى للترفيه العائلي في العراق، وتقديم نموذج رائد في صناعة الترفيه الآمن والممتع. نطمح إلى توسيع نطاقنا ليشمل المزيد من المدن العراقية في المستقبل القريب.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-gradient-to-br from-dark via-gray-800 to-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl md:text-5xl font-bold text-primary mb-2 counter" data-target="14">0</div>
+                    <div class="text-white/70">لعبة متنوعة</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl md:text-5xl font-bold text-secondary mb-2 counter" data-target="10000">0</div>
+                    <div class="text-white/70">زائر شهرياً</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl md:text-5xl font-bold text-accent mb-2 counter" data-target="500">0</div>
+                    <div class="text-white/70">حفلة birthday</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-4xl md:text-5xl font-bold text-green-400 mb-2 counter" data-target="4">0</div>
+                    <div class="text-white/70">سنوات خبرة</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="inline-block bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    خدماتنا
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold text-dark mb-4">
+                    مميزات <span class="text-primary">مدينتنا</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- مسبح نور المقدادية المركزي -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-swimming-pool text-blue-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">مسبح نور المقدادية المركزي</h3>
+                    <p class="text-gray-600 mb-4">مسبح عائلي مجهز بأحدث المرافق لضمان تجربة ممتعة وآمنة</p>
+                    <a href="tel:07709834893" class="inline-flex items-center text-primary font-semibold hover:text-blue-500 transition-all">
+                        <i class="fas fa-phone rtl:ml-2 rtl:mr-0"></i>
+                        07709834893
+                    </a>
+                </div>
+
+                <!-- حمام بشوات المقدادية -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-bath text-teal-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">حمام بشوات المقدادية</h3>
+                    <p class="text-gray-600 mb-4">حمام تقليدي يقدم خدمات الحمام التركي بمعايير عالية من الجودة</p>
+                    <a href="tel:07709834893" class="inline-flex items-center text-primary font-semibold hover:text-teal-500 transition-all">
+                        <i class="fas fa-phone rtl:ml-2 rtl:mr-0"></i>
+                        07709834893
+                    </a>
+                </div>
+
+                <!-- كوفي صفاوي -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-coffee text-purple-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">كوفي صفاوي</h3>
+                    <p class="text-gray-600 mb-4">مقهى راقٍ يقدم أجود أنواع القهوة والمشروبات الباردة والساخنة</p>
+                    <a href="tel:07705373381" class="inline-flex items-center text-primary font-semibold hover:text-purple-500 transition-all">
+                        <i class="fas fa-phone rtl:ml-2 rtl:mr-0"></i>
+                        07705373381
+                    </a>
+                </div>
+
+                <!-- ماركت السلام الفرع الثاني -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shopping-cart text-green-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">ماركت السلام الفرع الثاني</h3>
+                    <p class="text-gray-600 mb-4">سوبر ماركت متكامل يوفر جميع احتياجات العائلة بأسعار مناسبة</p>
+                    <a href="tel:07740444041" class="inline-flex items-center text-primary font-semibold hover:text-green-500 transition-all">
+                        <i class="fas fa-phone rtl:ml-2 rtl:mr-0"></i>
+                        07740444041
+                    </a>
+                </div>
+
+                <!-- مطعم مندي شموخ اليمن -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="500">
+                    <div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-utensils text-orange-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">مطعم مندي شموخ اليمن</h3>
+                    <p class="text-gray-600 mb-4">مطعم يمني أصيل يقدم أشهى أطباق المندي اليمني الأصلي</p>
+                    <a href="tel:07732222026" class="inline-flex items-center text-primary font-semibold hover:text-orange-500 transition-all">
+                        <i class="fas fa-phone rtl:ml-2 rtl:mr-0"></i>
+                        07732222026
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-orange-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-aos="fade-up">
+                هل أنت مستعد للمرح والمتعة؟
+            </h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                احجز تذكرتك الآن واستمتع بتجربة لا تُنسى في مدينة ألعاب نور المقدادية
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="200">
+                <a href="pricing.html" class="inline-flex items-center bg-white text-primary px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+                    احجز الآن
+                    <i class="fas fa-ticket-alt rtl:ml-2 rtl:mr-0"></i>
+                </a>
+                <a href="contact.html" class="inline-flex items-center bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-primary transition-all transform hover:scale-105">
+                    تواصل معنا
+                    <i class="fas fa-phone rtl:ml-2 rtl:mr-0"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center space-x-3 rtl:space-x-reverse mb-6">
+                        <img src="images/logo.jpg" alt="مدينة العاب نور المقدادية" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h3 class="text-gray-400 leading-relaxed">مدينة العاب</h3>
+                            <p class="text-sm text-gray-400">نور المقدادية</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed">
+                        مدينة ألعاب نور المقدادية هي الوجهة الأولى للترفيه العائلي في محافظة ديالى، حيث نوفر تجربة ممتعة وآمنة للجميع.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">روابط سريعة</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-all">الرئيسية</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-all">من نحن</a></li>
+                        <li><a href="games.html" class="text-gray-400 hover:text-white transition-all">ألعابنا</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition-all">الأسعار</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-all">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">خدماتنا</h4>
+                    <ul class="space-y-3">
+                        <li><a href="games.html" class="text-gray-400 hover:text-white transition-all">ألعاب متنوعة</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition-all">حفلات أعياد ميلاد</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition-all">فعاليات خاصة</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-all">حجز مجموعات</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">تواصل معنا</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <span class="text-gray-400">المقدادية، محافظة ديالى، العراق</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone text-primary"></i>
+                            <a href="tel:07740444047" class="text-gray-400 hover:text-white transition-all">07740444047</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <a href="mailto:info@nooralmoqadadiya.com" class="text-gray-400 hover:text-white transition-all">info@nooralmoqadadiya.com</a>
+                        </li>
+                    </ul>
+                    <!-- Social Media -->
+                    <div class="flex gap-4 mt-6">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-all">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-all">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-all">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-all">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    جميع الحقوق محفوظة. لدى مدينه العاب نور المقدادية 2026 &copy;
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.add('hidden');
+        }
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.innerText = target.toLocaleString();
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Trigger counter animation when stats section is in view
+        const statsSection = document.querySelector('.counter');
+        if (statsSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(statsSection);
+        }
+    </script>
+</body>
+</html>

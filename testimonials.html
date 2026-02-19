@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="آراء وتعليقات العملاء لمدينة ألعاب نور المقدادية - ماذا يقول زوارنا">
+    <meta name="keywords" content="آراء, تعليقات, عملاء, نور المقدادية, Diyala, العراق">
+    
+    <title>آراء العملاء | مدينه العاب نور المقدادية</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts - Arabic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>NO</text></svg>">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6D28D9',  /* Violet/Purple */
+                        secondary: '#7C3AED', /* Light purple */
+                        accent: '#F59E0B',    /* Sunny Yellow */
+                        dark: '#1F2937',
+                        light: '#fbf2d5',
+                    },
+                    fontFamily: {
+                        arabic: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-arabic" style="background-color: #fbf2d5;">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 shadow-md" id="navbar" style="background-color: #fbf2d5; border-bottom: 2px solid #6D28D9;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="images/logo.jpg" alt="مدينة العاب نور المقدادية" class="w-12 h-12 rounded-full object-cover shadow-md">
+                    <div>
+                        <h1 class="text-xl font-bold text-dark">مدينه العاب</h1>
+                        <p class="text-sm text-primary font-semibold">نور المقدادية</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-1 rtl:space-x-reverse">
+                    <a href="index.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">الرئيسية</a>
+                    <a href="about.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">من نحن</a>
+                    <a href="games.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">ألعابنا</a>
+                    <a href="pricing.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">الأسعار</a>
+                    <a href="jobs.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">الوظائف</a>
+                    <a href="gallery.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">معرض الصور</a>
+                    <a href="testimonials.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">آراء العملاء</a>
+                    <a href="contact.html" class="nav-link px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">اتصل بنا</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="tel:07716163020" class="bg-primary text-white px-6 py-3 rounded-full font-bold hover:bg-violet-700 transition-all transform hover:scale-105 shadow-lg">
+                        اتصل بنا الآن
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-dark text-2xl" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="lg:hidden hidden bg-white border-t" id="mobile-menu">
+                <a href="index.html" class="block px-4 py-3 hover:bg-primary/10 border-b">الرئيسية</a>
+                <a href="about.html" class="block px-4 py-3 hover:bg-primary/10 border-b">من نحن</a>
+                <a href="games.html" class="block px-4 py-3 hover:bg-primary/10 border-b">ألعابنا</a>
+                <a href="pricing.html" class="block px-4 py-3 hover:bg-primary/10 border-b">الأسعار</a>
+                <a href="jobs.html" class="block px-4 py-3 hover:bg-primary/10 border-b">الوظائف</a>
+                <a href="gallery.html" class="block px-4 py-3 hover:bg-primary/10 border-b">معرض الصور</a>
+                <a href="testimonials.html" class="block px-4 py-3 hover:bg-primary/10 border-b">آراء العملاء</a>
+                <a href="contact.html" class="block px-4 py-3 hover:bg-primary/10">اتصل بنا</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-secondary/5 to-accent/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-dark mb-4" data-aos="fade-up">
+                ماذا يقول <span class="text-primary">زوارنا؟</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="100">
+                اقرأ تجارب واراء الزوار الذين استمتعوا بوقتهم في مدينتنا
+            </p>
+        </div>
+    </section>
+
+    <!-- Add Review Form -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-3xl p-8 md:p-12" data-aos="fade-up">
+                <h2 class="text-3xl font-bold text-dark mb-2 text-center">
+                    <i class="fas fa-star text-accent mr-2"></i>
+                    شارك رأيك معنا
+                </h2>
+                <p class="text-center text-gray-600 mb-8">هل استمتعت بزيارتك؟ شارك تجربتك مع الآخرين</p>
+                
+                <form id="review-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-dark mb-2">اسمك</label>
+                            <input type="text" id="reviewer-name" required class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-primary focus:outline-none transition-all" placeholder="أدخل اسمك">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-dark mb-2">التقييم</label>
+                            <div class="flex gap-2">
+                                <button type="button" class="star-btn text-3xl" data-rating="1" title="سيء">⭐</button>
+                                <button type="button" class="star-btn text-3xl" data-rating="2" title="متوسط">⭐</button>
+                                <button type="button" class="star-btn text-3xl" data-rating="3" title="جيد">⭐</button>
+                                <button type="button" class="star-btn text-3xl" data-rating="4" title="جداً جيد">⭐</button>
+                                <button type="button" class="star-btn text-3xl" data-rating="5" title="ممتاز">⭐</button>
+                            </div>
+                            <input type="hidden" id="review-rating" value="5">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-dark mb-2">رسالتك</label>
+                        <textarea id="reviewer-message" required rows="5" class="form-input w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-primary focus:outline-none transition-all resize-none" placeholder="شارك تجربتك والملاحظات..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-white py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all transform hover:scale-105">
+                        <i class="fas fa-paper-plane ml-2"></i>
+                        إرسال التقييم
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Display -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-dark mb-4">آراء العملاء</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+            
+            <div id="reviews-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Default testimonials will be loaded here -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg" data-aos="fade-up">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-bold text-dark">محمد علي</h3>
+                        <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="text-gray-600">مكان رائع جداً، استمتع أطفالي كثيراً بالألعاب والأنشطة. الموظفون محترفون وودودون!</p>
+                    <p class="text-sm text-gray-400 mt-4">قبل أسبوع</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-bold text-dark">فاطمة أحمد</h3>
+                        <div class="text-yellow-400">⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="text-gray-600">تجربة عائلية ممتازة! أعجبنا نظافة المكان والألعاب المتنوعة والأسعار معقولة.</p>
+                    <p class="text-sm text-gray-400 mt-4">قبل أسبوعين</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-bold text-dark">حسن محمود</h3>
+                        <div class="text-yellow-400">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="text-gray-600">أفضل مكان لقضاء الوقت مع العائلة في المقدادية. بصراحة استحق الزيارة!</p>
+                    <p class="text-sm text-gray-400 mt-4">قبل شهر</p>
+                </div>
+            </div>
+
+            <div id="no-reviews-message" class="text-center text-gray-500 py-12 hidden">
+                <p class="text-lg">لا توجد آراء بعد. كن أول من يشارك رأيه!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-gray-300">أفضل وجهة للعائلات والأطفال في منطقة ديالى</h3>
+                    <p class="text-gray-300">أفضل وجهة للعائلات والأطفال في منطقة ديالى</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">الروابط السريعة</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="index.html" class="hover:text-primary transition">الرئيسية</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition">من نحن</a></li>
+                        <li><a href="games.html" class="hover:text-primary transition">ألعابنا</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">اتصل بنا</h4>
+                    <p class="text-gray-300 mb-2">
+                        <i class="fas fa-phone ml-2"></i>
+                        07716163020
+                    </p>
+                    <p class="text-gray-300">
+                        <i class="fas fa-envelope ml-2"></i>
+                        nouralmuqdadiya@gmail.com
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">العنوان</h4>
+                    <p class="text-gray-300">
+                        <i class="fas fa-map-marker-alt ml-2"></i>
+                        العراق - ديالى - المقدادية
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-300">
+                <p>&copy; 2026 مدينه العاب نور المقدادية. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        /**
+         * Testimonials Page Scripts
+         */
+        
+        // Star rating system
+        document.querySelectorAll('.star-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const rating = this.dataset.rating;
+                document.getElementById('review-rating').value = rating;
+                
+                // Update star display
+                document.querySelectorAll('.star-btn').forEach(b => {
+                    b.style.opacity = b.dataset.rating <= rating ? '1' : '0.3';
+                });
+            });
+        });
+
+        // Initialize stars
+        document.querySelectorAll('.star-btn').forEach(btn => {
+            if(btn.dataset.rating <= 5) {
+                btn.style.opacity = '1';
+            }
+        });
+
+        // Submit review form
+        document.getElementById('review-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('reviewer-name').value.trim();
+            const message = document.getElementById('reviewer-message').value.trim();
+            const rating = document.getElementById('review-rating').value;
+            
+            if (!name || !message) {
+                alert('الرجاء ملء جميع الحقول');
+                return;
+            }
+            
+            // Get existing reviews
+            let reviews = JSON.parse(localStorage.getItem('testimonials')) || [];
+            
+            // Add new review
+            const newReview = {
+                id: Date.now(),
+                name: name,
+                message: message,
+                rating: parseInt(rating),
+                date: new Date().toLocaleDateString('ar-IQ')
+            };
+            
+            reviews.unshift(newReview);
+            
+            // Save to localStorage
+            localStorage.setItem('testimonials', JSON.stringify(reviews));
+            
+            // Clear form
+            document.getElementById('review-form').reset();
+            document.getElementById('review-rating').value = '5';
+            document.querySelectorAll('.star-btn').forEach(btn => {
+                btn.style.opacity = btn.dataset.rating <= 5 ? '1' : '0.3';
+            });
+            
+            // Reload reviews
+            loadReviews();
+            
+            // Show success message
+            alert('شكراً! تم إضافة رأيك بنجاح');
+        });
+
+        // Load reviews from localStorage
+        function loadReviews() {
+            const reviews = JSON.parse(localStorage.getItem('testimonials')) || [];
+            const container = document.getElementById('reviews-container');
+            
+            // Keep default reviews if no user reviews
+            if (reviews.length === 0) {
+                // Default reviews already in HTML
+                return;
+            }
+            
+            // Clear container
+            container.innerHTML = '';
+            
+            // Add user reviews first
+            reviews.forEach(review => {
+                const stars = '⭐'.repeat(review.rating);
+                const reviewCard = document.createElement('div');
+                reviewCard.className = 'bg-white rounded-2xl p-6 shadow-lg';
+                reviewCard.setAttribute('data-aos', 'fade-up');
+                reviewCard.innerHTML = `
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-bold text-dark">${review.name}</h3>
+                        <div class="text-yellow-400">${stars}</div>
+                    </div>
+                    <p class="text-gray-600">${review.message}</p>
+                    <p class="text-sm text-gray-400 mt-4">${review.date}</p>
+                `;
+                container.appendChild(reviewCard);
+            });
+            
+            // Reinitialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.refreshHard();
+            }
+        }
+
+        // Load reviews on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadReviews();
+        });
+    </script>
+</body>
+</html>
